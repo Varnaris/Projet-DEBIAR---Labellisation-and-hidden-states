@@ -4,9 +4,10 @@ import os
 import pandas as pd
 import gc
 import numpy as np
-
+from dotenv import load_dotenv
+load_dotenv()
 from huggingface_hub import login
-login("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")
+login(token=os.getenv("HF_TOKEN"))
 
 import bitsandbytes
 import torch
